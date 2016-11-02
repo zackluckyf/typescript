@@ -51,4 +51,29 @@ var pets = p.calcPets();
 console.log(pets);
 var greeting = p.greet('hello');
 console.log(greeting);
+var Shapes;
+(function (Shapes) {
+    var Rectangle = (function () {
+        function Rectangle(height, width) {
+            this.height = height;
+            this.width = width;
+        }
+        return Rectangle;
+    }());
+    Shapes.Rectangle = Rectangle;
+})(Shapes || (Shapes = {}));
+var rect = new Shapes.Rectangle(2, 4);
+var Shapes;
+(function (Shapes) {
+    var Circle = (function () {
+        function Circle(radius) {
+            this.radius = radius;
+        }
+        return Circle;
+    }());
+    Shapes.Circle = Circle;
+})(Shapes || (Shapes = {}));
+var circle = new Shapes.Circle(10);
+console.log(rect);
+console.log(circle);
 //# sourceMappingURL=bundle.js.map

@@ -80,3 +80,26 @@ var pets = p.calcPets();
 console.log(pets);
 var greeting = p.greet('hello')
 console.log(greeting);
+
+// modules can be opened/reopened and added to whenever
+
+namespace Shapes{
+  export class Rectangle{
+    constructor(public height: number, public width: number){
+    }
+  }
+}
+
+var rect = new Shapes.Rectangle(2,4);
+
+namespace Shapes{
+  export class Circle{
+    constructor(public radius: number){
+    }
+  }
+}
+
+var circle = new Shapes.Circle(10);
+
+console.log(rect);
+console.log(circle);
